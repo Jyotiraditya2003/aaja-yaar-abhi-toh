@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Invite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffebee;
+            font-family: 'Pacifico', cursive;
+            color: #d81b60;
+            text-align: center;
+            overflow: hidden; /* Prevent scroll bars */
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        #yesButton {
+            background-color: #76ff03;
+            color: #000;
+        }
+        #noButton {
+            background-color: #ff4081;
+            color: #fff;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        canvas#confetti {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Will you come to coffee with me?</h1>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <canvas id="confetti"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
